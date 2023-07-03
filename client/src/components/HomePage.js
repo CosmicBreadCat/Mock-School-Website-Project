@@ -1,12 +1,11 @@
-import { Box, Flex } from "@chakra-ui/react";
-
+import { Box } from "@chakra-ui/react";
 
 function HomePage() {
-    return(
-        <Box margin="10px">
-            <p>Home</p>
-        </Box>
-    );
+	return (
+		<Box margin="10px">
+			<p>Home</p>
+		</Box>
+	);
 }
 
 export default HomePage;
