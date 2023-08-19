@@ -14,9 +14,24 @@ function NavBar(props) {
 					marginX="15px"
 					textColor="white"
 				>
-					<Link to="/">Home</Link>
-					<Link to="/courses">Courses</Link>
-					<Link to="/about">About</Link>
+					<Link to="/">
+						<p>Home</p>
+					</Link>
+					<Link to="/courses">
+						{props.resData.type === "teacher" ? (
+							<p>Your Courses</p>
+						) : (
+							<p>Courses</p>
+						)}
+					</Link>
+					{props.resData.type === "admin" ? (
+						<Link to={"/accounts"}>Accounts</Link>
+					) : (
+						""
+					)}
+					<Link to="/about">
+						<p>About</p>
+					</Link>
 
 					<Spacer />
 					<Box>

@@ -12,6 +12,7 @@ import NavBar from "./NavBar.js";
 import HomePage from "./HomePage.js";
 import AboutPage from "./AboutPage.js";
 import CoursesPage from "./CoursesPage.js";
+import AccountsPage from "./AccountsPage.js";
 
 function LoginPage() {
 	const [userID, setUserID] = useState();
@@ -60,6 +61,10 @@ function LoginPage() {
 					<Route path="/" element={<HomePage />} />
 					<Route path="/about" element={<AboutPage />} />
 					<Route path="/courses" element={<CoursesPage resData={resData} />} />
+					<Route
+						path="/accounts"
+						element={<AccountsPage resData={resData} />}
+					/>
 				</Routes>
 			</Box>
 		</Box>
